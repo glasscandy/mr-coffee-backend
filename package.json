@@ -1,0 +1,29 @@
+{
+  "name": "mr-coffee-backend-glasscandy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:watch": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pl-incode/mr-coffee-backend-glasscandy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pl-incode/mr-coffee-backend-glasscandy/issues"
+  },
+  "homepage": "https://github.com/pl-incode/mr-coffee-backend-glasscandy#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mustache-express": "^1.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
