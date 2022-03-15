@@ -41,7 +41,7 @@ module.exports.schedules = [
     {
         "user_id": 1,
         "day": 3,
-        "start_at": "8PM",
+        "start_at": "8AM",
         "end_at": "2PM"
     },
     {

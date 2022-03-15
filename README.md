@@ -1,45 +1,40 @@
-Przygotowanie środowiska do projektu:
+# Schedule webapp
 
-1 Stworzenie folderu z projektem:   mkdir my-webapp && cd my-webapp
+A web application for the Mr Coffee website to run a work schedule.
 
-2 Inicjalizacja npm'a:  npm init -y
+## Description
 
-3 Zdefiowanie zaleznosci:   npm install --save express
+An application created for educational purposes.
 
-4 Stworzenie pliku: src/index.js
+## Getting Started
 
-    4.1 Otwórz plik index.js
+### Dependencies
 
-    4.2 Import bibioteki: const express = require('express'); 
+You will need:
+* node.js and a node global package
+* frameworks/libraries:
+    - "express" version: "^4.17.3",
+    - "js-sha256" version: "^0.9.0",
+    - "mustache-express" verstion: "^1.3.2"
 
-    4.3 Inicjalizacja aplikacji: const app = express();
+### Installing
 
-    4.4 Zdefioniowanie handler'ów:
+```
+    $ git clone git@github.com:pl-incode/mr-coffee-backend-glasscandy.git
+    $ cd mr-coffee-backend-glasscandy
+    $ npm init -y
+    $ npm install --save express
+    $ npm install joi --save
+    $ npm install nodemon --save-dev
+    $ npm install js-sha256 --save
+    $ npm i --save mustache-express
+```
 
-            app.get('/', (request, response, next) => {
-                console.log(request.headers);
+### Executing program
 
-                response.json({'message': 'HELLO INCODE 22222!'});
-            })
-
-            app.get('/karolina', (request, response, next) => {
-                console.log(request.headers);
-
-                response.json({'message': 'totalnie inna odpowiedź!'});
-            })
-
-    4.5 Ustawienie portu nasłuchiwania: 
-            
-            app.listen(3000,() => {
-                console.log('http://localhost:3000/');
-                }
-            )
-
-5 Instalacja nodemon:  npm i --save-dev nodemon
-
-6 Podmienić teks w pliku package.json ze "scripts": {"test": "..."} na:
-
-            "scripts": {
-                "start": "node src/index.js",
-                "start:watch": "nodemon src/index.js"
-            },
+```
+    $ cd mr-coffee-backend-glasscandy
+    $ node src/index.js
+    or
+    $ npx nodemon src/index.js
+```
