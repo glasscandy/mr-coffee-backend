@@ -18,7 +18,7 @@ app.use('/static', express.static('static'));
 app.use('/static/assets', express.static('static'));
 
 app.get('/', (req, res) => {
-    res.render('welcome', { 'Welcome': 'Welcome to our schedule website' });
+    res.render('welcome', { 'Welcome': 'Welcome to our work schedule website' });
 });
 
 app.route('/users/new')
@@ -32,10 +32,10 @@ app.route('/users/new')
 
 app.get('/users/:id/:schedules', (req, res) => {
     const userId = parseInt(req.params.id);
-    const fullName = Object.values(users[userId]);
+    const fullName = Object.values(users[userId]); 
 
     if (userId >= users.length) {
-        res.render('schedule', { 'title': 'No such user' });
+        res.render('schedule', { 'title': 'There is no such employee' });
         return;
     };
 
@@ -47,7 +47,7 @@ app.get('/users/:id/:schedules', (req, res) => {
     };
 
     if (userShcedule.length < 1) {
-        res.render('schedule', { 'title': 'Make an appointemnt' });
+        res.render('schedule', { 'title': 'Add new schedule' });
         return;
     };
     res.render('schedule', { 'title': `${fullName[0]} ${fullName[1]} schedule`, 'schedule': userShcedule });
@@ -57,8 +57,8 @@ app.get('/users/:id', (req, res) => {
     const userId = parseInt(req.params.id);
 
     userId >= users.length
-        ? res.render('user', { 'title': 'No such user' })
-        : res.render('user', { 'title': 'User information', 'user': users[userId] });
+        ? res.render('user', { 'title': 'There is no such employee' })
+        : res.render('user', { 'title': 'Employee information', 'user': users[userId] });
 });
 
 app.route('/users')
