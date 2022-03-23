@@ -32,7 +32,15 @@
 
         <div class="container">
             <h2 class="title">Adding a new schedule</h2>
-            <form class="form  form-content" method="POST" action="/schedules">
+            <table class="table-link">
+                <tbody>
+                    <tr>
+                        <td><a href="/">go to all schedules</a></td>
+                        <td><a href="/new">add new schedule</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <form class="form  form-content" method="POST" action="/new">
                 <label for="user_id">Employee</label>
                 <select name="user_id">
                     {{#users}}
@@ -49,17 +57,17 @@
                     <option value="6">Sobota</option>
                     <option value="7">Niedziela</option>
                 </select>
-                <label for="start_at">Start at</label>
+                <label id="error-start" for="start_at">Start at</label>
                 <div class="flex">
-                    <input class="ampm" type="time" name="start_at">
+                    <input class="ampm" id="time-start" type="time" name="start_at" required>
                     <select class="ampm" name="ampm">
                         <option value="AM">AM</option>
                         <option value="PM">PM</option>
                     </select>
                 </div>  
-                <label for="end_at">End at</label>
+                <label id="error-ent" for="end_at">End at</label>
                 <div class="flex">
-                    <input class="ampm" type="time" name="end_at">
+                    <input class="ampm" id="time-end" type="time" name="end_at" required>
                     <select class="ampm" name="ampm">
                         <option value="PM">PM</option>
                         <option value="AM">AM</option>

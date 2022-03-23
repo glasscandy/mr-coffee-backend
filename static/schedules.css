@@ -1,12 +1,22 @@
-.welcome {
-    padding-bottom: 100px;
+.table-link {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 45%;
+    text-align: center;
+    vertical-align: top;
+    text-transform: uppercase;
+}
+
+.table-link a {
+    font-size: 12px;
+    color: rgb(92,91,91);
 }
 
 /* '/schedules' */
 .table {
-    padding: 40px 0 100px 0;
+    padding: 20px 0 100px 0;
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
     color: rgb(92,91,91);
 }
 
@@ -23,7 +33,7 @@
 
 /* /schedule/new */
 .form-content {
-    padding: 60px 0 100px 0;
+    padding: 40px 0 100px 0;
 }
 
 select, input {
@@ -33,6 +43,21 @@ select, input {
     border: 0;
     height: 40px;
     font-size: 15px;
+    color: rgb(92,91,91);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.ampm {
+    width: 50%;
+}
+
+.flex input {
+    margin-right: 3%;
 }
 
 .form button {
@@ -62,6 +87,3 @@ select, input {
 .userInfo p {
     font-size: 13px;
 }
-
-/* '/users/id/schedules' */
-
